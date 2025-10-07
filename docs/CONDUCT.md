@@ -84,3 +84,5 @@ For answers to common questions about this code of conduct, see the FAQ at [http
 [translations]: https://www.contributor-covenant.org/translations
 
 <img width="589" height="171" alt="Untitled (Draft)" src="https://github.com/user-attachments/assets/6b1556b0-7c7a-4fb7-9b69-289f76222b3c" />
+
+![Dartt Signature](https://drive.google.com/uc?export=view&id=1So9ll_jmEs3MIf2SSQtaeaUGD-yVeZcl)
