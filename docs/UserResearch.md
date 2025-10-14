@@ -5,8 +5,14 @@ Obversation 1 (James Dartt):
 
 Observation 2 (Badhan Hasan):
 - Observation Statement:
+  Survey results indicate that students value interactive and transparent feedback features. The majority of respondents (88.2%) favored having an anonymous feedback option, while 70.6% supported an idea upvoting system
 - Supporting Data:
+  - 88.2% (15 out of 17) selected Anonymous Feedback Option as a desired feature.
+  - 70.6% (12 out of 17) supported an Idea Upvoting System.
+  - 58.8% (10 out of 17) favored department specific Feedback Boards.
+  - Several open ended responses highlighted the need for clearer explanations of feedback and notifications when feedback is updated.
 - Team Action (if any):
+  The team should prioritize implementing an anonymous feedback feature and an idea upvoting system to enhance transparency and student engagement.
 
 Obversation 3 (Kevin Walker):
 - Observation Statement:
