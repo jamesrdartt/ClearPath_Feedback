@@ -1,6 +1,6 @@
 Obversation 1 (James Dartt):
 - Observation Statement: Main complaints from students/employees is that feedback is usually ignored by professors/managers. Because of this, students/employees rarely give feedback, if at all. Main complaints from professors/employers is that feedback is often too vague, so they don't know how to improve, if they can at all. 
-- Supporting Data: All of the responese to Question 3b were complaining about how feedback is currently handled. 14/17 responses to Question 5 said users were at least somewhat likely to use an app like ClearPath Feedback.
+- Supporting Data: All of the responses to Question 3b were complaining about how feedback is currently handled. 14/17 responses to Question 5 said users were at least somewhat likely to use an app like ClearPath Feedback.
 - Team Action (if any): Make being anonymous an option, since 15/17 responses requested it. Have filtering options.
 
 Observation 2 (Badhan Hasan):
@@ -15,9 +15,9 @@ Observation 2 (Badhan Hasan):
   The team should prioritize implementing an anonymous feedback feature and an idea upvoting system to enhance transparency and student engagement.
 
 Obversation 3 (Kevin Walker):
-- Observation Statement:
-- Supporting Data:
-- Team Action (if any):
+- Observation Statement: Main complaint from students and employees is feedback is usually ignored. Main complaint from professors and managers is feedback is usually too vague to act upon.
+- Supporting Data: Responses to Question 3a Question 3b.
+- Team Action (if any): Make an anonymous feature.
 
 Observation 4 (Rafael Lacerda):
 - Observation Statement: Feedback is usually hard to find, leading to nothing being resulted from said feedback.
