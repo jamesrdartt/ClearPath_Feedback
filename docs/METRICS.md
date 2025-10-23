@@ -25,7 +25,14 @@ Engagement Metrics:
   - A Cloud Function runs nightly to compute the mean value across all users who logged in that day.
 
 Adoption Metrics:
-- Metric 1:
+- New User Sign-ups per Week:
+  - Automatically tracked via Firebase Analytics using the built-in first_open event.
+  - This metric reflects how many new users begin using ClearPath Feedback each week.
+  - Developers can view the trend in the Firebase dashboard or export it to BigQuery for detailed cohort analysis.
+- Onboarding Completion Rate:
+  - Calculated as (users who finish onboarding ÷ total new sign-ups).
+  - A custom event onboarding_complete is logged once users upload a profile picture and fill in basic details.
+  - A Cloud Function aggregates weekly completion percentages to track onboarding effectiveness over time.
 
 Retention Metrics:
 - Metric 1:
