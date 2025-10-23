@@ -31,4 +31,10 @@ Retention Metrics:
 - Metric 1:
 
 Task Success Metrics:
-- Metric 1: 
+- Average posts made per user:
+  - A script will collect and store the amount of posts each user creates.
+  - Encourage users to engage more if amount of posts too low.
+- Average feedback posts marked as completed/addressed:
+  - Another script will collect and store the amount of posts markes as complete by employers/company users.
+  - Alert user when a high amount of feedback posts collect.
+  - Also alert user when feedback already marked as complete is posted again.
