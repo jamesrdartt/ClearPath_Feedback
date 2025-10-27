@@ -6,11 +6,11 @@
 - Variations: Version A: One unified screen shows both “Sign in” and “Create account” options in a combined layout. Version B: Clear separation: landing screen has two clear CTA buttons: Sign In and Create Account.
 
 # A/B Test 2 (Rafael Lacerda): 
-- User Story: 
-- Metric(s): 
-- Hypothesis: 
-- Experiment: 
-- Variations:
+- User Story: US 3
+- Metric(s): Adoption (rate of distinct profile pictures for new accounts), Task Success (percentage of users setting or not setting a profile picture), Engagement (For group B, the percentage of new accounts that don't have the default profile picture), Happiness (rate of users who engage with changing profile pictures after account creation)
+- Hypothesis: If users have unique profile pictures to them, it will allow companies to better identify users who better interact with the platform and link them to their feedback.
+- Experiment: Using the Firebase Remote Config and A/B Testing we will push out the two versions of the app. Using a profile picture change metric, Firebase A/B testing will collect amount of users who change their profile picture upon account creation for Version B.
+- Variations: Version A: Users will be required to set a profile picture upon account creation. Version B: Users will not be required to change their profile picture, setting their account with the default image.
 
 # A/B Test 3 (Kevin Walker): 
 - User Story: 
