@@ -5,7 +5,7 @@
 - Experiment: Use Firebase Remote Config + Firebase A/B Testing to deliver the two UI variations. Remote Config flags the client to render either the single-screen flow or the two-screen flow. Firebase A/B Testing will manage traffic allocation and report on significance.
 - Variations: Version A: One unified screen shows both “Sign in” and “Create account” options in a combined layout. Version B: Clear separation: landing screen has two clear CTA buttons: Sign In and Create Account.
 
-# A/B Test 2 (Rafael Lacerda): 
+# A/B Test 2 (Rafael Lacerda): Profile Screen
 - User Story: US 3
 - Metric(s): Adoption (rate of distinct profile pictures for new accounts), Task Success (percentage of users setting or not setting a profile picture), Engagement (For group B, the percentage of new accounts that don't have the default profile picture), Happiness (rate of users who engage with changing profile pictures after account creation)
 - Hypothesis: If users have unique profile pictures to them, it will allow companies to better identify users who better interact with the platform and link them to their feedback.
