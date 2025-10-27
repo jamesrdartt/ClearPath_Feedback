@@ -21,9 +21,7 @@
 
 # A/B Test 4 (Badhan Hasan): 
 - User Story: US 3
-- Metric(s):
-  - Adoption: Profile setup completion rate = (users who finish setup ÷ total who start).
-  - Engagement: Percentage of users who fill out the bio field.
+- Metric(s): Adoption (rate of users who complete profile setup when a bio field is present), Task Success (percentage of users who add or skip the bio field during setup), Engagement (percentage of users who later edit or update their bio after account creation), Happiness (average satisfaction rating from users who included a bio).
 - Hypothesis: Adding a short optional bio field helps users personalize their profiles and feel more connected, increasing completion rates and engagement.
 - Experiment: Using Firebase A/B Testing, half of new users see a bio text box during profile setup, while the other half don’t. Firebase tracks completion rate and bio usage for each group.
 - Variations:
