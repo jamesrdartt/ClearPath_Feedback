@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "274095815229",
+    "project_id": "clear-path-feedback-k3jc0k",
+    "storage_bucket": "clear-path-feedback-k3jc0k.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274095815229:android:eb459f21d978907ee94854",
+        "android_client_info": {
+          "package_name": "com.mycompany.clearpathfeedback"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAer1ty2g-FcNQAJlbrUqXWXvHXMEkw_yc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274095815229:android:a95893a827df9300e94854",
+        "android_client_info": {
+          "package_name": "com.uricsc305.clearpathfeedback"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAer1ty2g-FcNQAJlbrUqXWXvHXMEkw_yc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
