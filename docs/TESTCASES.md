@@ -1,6 +1,6 @@
 - <https://docs.google.com/presentation/d/1Mv9p05VBsdJPr4UArxv8mNlf3IpdK1NOnDA-HVKMOYM/edit?usp=sharing> US1: User Account Creation
 
-- <link to template slide> US2: User Login
+- <[link to template slide](https://docs.google.com/presentation/d/1DcSrWYtP7sAMRq_maRrDiZAJ8a6HV8LECd-T8b6x6Tc/edit?usp=sharing)> US2: User Login
 
 - <https://docs.google.com/presentation/d/19Bnq1iV5SHz0sGRuNR6-1xVwVGwKGKhBOq7VmsMNjWQ/edit?slide=id.p#slide=id.p>  US3: Onboarding
   
