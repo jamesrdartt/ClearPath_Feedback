@@ -51,7 +51,9 @@ void main() async {
   testWidgets('US2-User Login-Test1', (WidgetTester tester) async {
     _overrideOnError();
 
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(MyApp(
+      entryPage: LoginWidget(),
+    ));
     await GoogleFonts.pendingFonts();
 
     await tester.tap(find.byKey(const ValueKey('LoginTab_tkoh')));
@@ -69,7 +71,9 @@ void main() async {
   testWidgets('US2-User Login-Test2', (WidgetTester tester) async {
     _overrideOnError();
 
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(MyApp(
+      entryPage: LoginWidget(),
+    ));
     await GoogleFonts.pendingFonts();
 
     await tester.tap(find.byKey(const ValueKey('LoginTab_tkoh')));
@@ -87,7 +91,9 @@ void main() async {
   testWidgets('US2-User Login-Test3', (WidgetTester tester) async {
     _overrideOnError();
 
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(MyApp(
+      entryPage: LoginWidget(),
+    ));
     await GoogleFonts.pendingFonts();
 
     await tester.tap(find.byKey(const ValueKey('LoginTab_tkoh')));
