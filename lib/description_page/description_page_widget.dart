@@ -243,6 +243,8 @@ class _DescriptionPageWidgetState extends State<DescriptionPageWidget> {
                               ),
                             });
 
+                            safeSetState(() {});
+
                             await widget.feedbackDoc!.reference.update({
                               ...mapToFirestore(
                                 {

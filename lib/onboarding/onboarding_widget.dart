@@ -153,6 +153,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                   ));
                                 },
                                 child: Container(
+                                  key: ValueKey('Container_cmzu'),
                                   width: 80.0,
                                   height: 80.0,
                                   decoration: BoxDecoration(

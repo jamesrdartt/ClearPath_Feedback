@@ -152,6 +152,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                   Container(
                                     width: double.infinity,
                                     child: TextFormField(
+                                      key: ValueKey('Signup-Email_3jcf'),
                                       controller:
                                           _model.signupEmailTextController,
                                       focusNode: _model.signupEmailFocusNode,
@@ -275,6 +276,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                   Container(
                                     width: double.infinity,
                                     child: TextFormField(
+                                      key: ValueKey('Signup-Password_wt4p'),
                                       controller:
                                           _model.signupPasswordTextController,
                                       focusNode: _model.signupPasswordFocusNode,
@@ -391,6 +393,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                   Container(
                                     width: double.infinity,
                                     child: TextFormField(
+                                      key: ValueKey(
+                                          'Signup-ConfirmPassword_7kco'),
                                       controller: _model
                                           .signupConfirmPasswordTextController,
                                       focusNode:
@@ -905,6 +909,7 @@ class _LoginWidgetState extends State<LoginWidget>
                       ),
                     if (_model.tabBarCurrentIndex == 0)
                       FFButtonWidget(
+                        key: ValueKey('Signup-Button_js59'),
                         onPressed: () async {
                           if (_model.formKey.currentState == null ||
                               !_model.formKey.currentState!.validate()) {
