@@ -35,14 +35,65 @@ void main() async {
     await GoogleFonts.pendingFonts();
 
     await tester.pumpAndSettle(const Duration(milliseconds: 3000));
-    await tester.tap(find.byKey(const ValueKey('Signup-Email_3jcf')));
+    await tester.enterText(find.byKey(const ValueKey('Signup-Email_3jcf')),
+        'testing@firebase.edu');
     await tester.pumpAndSettle(const Duration(milliseconds: 3000));
-    await tester.tap(find.byKey(const ValueKey('Signup-Password_wt4p')));
+    await tester.enterText(
+        find.byKey(const ValueKey('Signup-Password_wt4p')), 'password');
     await tester.pumpAndSettle(const Duration(milliseconds: 3000));
-    await tester.tap(find.byKey(const ValueKey('Signup-ConfirmPassword_7kco')));
+    await tester.enterText(
+        find.byKey(const ValueKey('Signup-ConfirmPassword_7kco')), 'password');
     await tester.pumpAndSettle(const Duration(milliseconds: 3000));
     await tester.tap(find.byKey(const ValueKey('Signup-Button_js59')));
     expect(find.byKey(const ValueKey('Container_cmzu')), findsWidgets);
+  });
+
+  testWidgets('US2-User Login-Test1', (WidgetTester tester) async {
+    _overrideOnError();
+
+    await tester.pumpWidget(const MyApp());
+    await GoogleFonts.pendingFonts();
+
+    await tester.tap(find.byKey(const ValueKey('LoginTab_tkoh')));
+    await tester.pump(kDoubleTapMinTime);
+    await tester.tap(find.byKey(const ValueKey('LoginTab_tkoh')));
+    await tester.enterText(
+        find.byKey(const ValueKey('Login-Email_p5vw')), 'rlacerda@uri.edu');
+    await tester.enterText(
+        find.byKey(const ValueKey('login_fuht')), 'test1234');
+    await tester.tap(find.bySemanticsLabel(RegExp('login')));
+  });
+
+  testWidgets('US2-User Login-Test2', (WidgetTester tester) async {
+    _overrideOnError();
+
+    await tester.pumpWidget(const MyApp());
+    await GoogleFonts.pendingFonts();
+
+    await tester.tap(find.byKey(const ValueKey('LoginTab_tkoh')));
+    await tester.pump(kDoubleTapMinTime);
+    await tester.tap(find.byKey(const ValueKey('LoginTab_tkoh')));
+    await tester.enterText(
+        find.byKey(const ValueKey('Login-Email_p5vw')), 'invalid@uri.edu');
+    await tester.enterText(
+        find.byKey(const ValueKey('login_fuht')), 'test1234');
+    await tester.tap(find.bySemanticsLabel(RegExp('login')));
+  });
+
+  testWidgets('US2-User Login-Test3', (WidgetTester tester) async {
+    _overrideOnError();
+
+    await tester.pumpWidget(const MyApp());
+    await GoogleFonts.pendingFonts();
+
+    await tester.tap(find.byKey(const ValueKey('LoginTab_tkoh')));
+    await tester.pump(kDoubleTapMinTime);
+    await tester.tap(find.byKey(const ValueKey('LoginTab_tkoh')));
+    await tester.enterText(
+        find.byKey(const ValueKey('Login-Email_p5vw')), 'rlacerda@uri.edu');
+    await tester.enterText(
+        find.byKey(const ValueKey('login_fuht')), '1234test');
+    await tester.tap(find.bySemanticsLabel(RegExp('login')));
   });
 }
 

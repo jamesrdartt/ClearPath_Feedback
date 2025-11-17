@@ -130,6 +130,7 @@ class _LoginWidgetState extends State<LoginWidget>
                               text: 'Signup',
                             ),
                             Tab(
+                              key: ValueKey('LoginTab_tkoh'),
                               text: 'Login',
                             ),
                           ],
@@ -616,6 +617,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                 Container(
                                   width: double.infinity,
                                   child: TextFormField(
+                                    key: ValueKey('Login-Email_p5vw'),
                                     controller: _model.loginEmailTextController,
                                     focusNode: _model.loginEmailFocusNode,
                                     onChanged: (_) => EasyDebounce.debounce(
@@ -859,52 +861,56 @@ class _LoginWidgetState extends State<LoginWidget>
                 Stack(
                   children: [
                     if (_model.tabBarCurrentIndex == 1)
-                      FFButtonWidget(
-                        onPressed: () async {
-                          GoRouter.of(context).prepareAuthEvent();
+                      Semantics(
+                        label: 'login',
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            GoRouter.of(context).prepareAuthEvent();
 
-                          final user = await authManager.signInWithEmail(
-                            context,
-                            _model.loginEmailTextController.text,
-                            _model.loginPasswordTextController.text,
-                          );
-                          if (user == null) {
-                            return;
-                          }
+                            final user = await authManager.signInWithEmail(
+                              context,
+                              _model.loginEmailTextController.text,
+                              _model.loginPasswordTextController.text,
+                            );
+                            if (user == null) {
+                              return;
+                            }
 
-                          context.goNamedAuth(
-                              FeedbacksWidget.routeName, context.mounted);
-                        },
-                        text: 'Login',
-                        options: FFButtonOptions(
-                          width: double.infinity,
-                          height: 70.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              16.0, 0.0, 16.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: colorFromCssString(
-                            getRemoteConfigString('button_variant'),
-                            defaultColor:
-                                FlutterFlowTheme.of(context).secondary,
+                            context.goNamedAuth(
+                                FeedbacksWidget.routeName, context.mounted);
+                          },
+                          text: 'Login',
+                          options: FFButtonOptions(
+                            width: double.infinity,
+                            height: 70.0,
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: colorFromCssString(
+                              getRemoteConfigString('button_variant'),
+                              defaultColor:
+                                  FlutterFlowTheme.of(context).secondary,
+                            ),
+                            textStyle: FlutterFlowTheme.of(context)
+                                .labelMedium
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .labelMediumFamily,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  fontSize: 20.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.w500,
+                                  useGoogleFonts: !FlutterFlowTheme.of(context)
+                                      .labelMediumIsCustom,
+                                ),
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primaryText,
+                            ),
+                            borderRadius: BorderRadius.circular(0.0),
                           ),
-                          textStyle: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .labelMediumFamily,
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                fontSize: 20.0,
-                                letterSpacing: 0.0,
-                                fontWeight: FontWeight.w500,
-                                useGoogleFonts: !FlutterFlowTheme.of(context)
-                                    .labelMediumIsCustom,
-                              ),
-                          elevation: 0.0,
-                          borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).primaryText,
-                          ),
-                          borderRadius: BorderRadius.circular(0.0),
                         ),
                       ),
                     if (_model.tabBarCurrentIndex == 0)
