@@ -62,6 +62,8 @@ void main() async {
     await tester.enterText(
         find.byKey(const ValueKey('login_fuht')), 'test1234');
     await tester.tap(find.bySemanticsLabel(RegExp('login')));
+    await tester.pumpAndSettle(const Duration(milliseconds: 2000));
+    expect(find.byKey(const ValueKey('Feedbacks_1k93')), findsOneWidget);
   });
 
   testWidgets('US2-User Login-Test2', (WidgetTester tester) async {
@@ -78,6 +80,8 @@ void main() async {
     await tester.enterText(
         find.byKey(const ValueKey('login_fuht')), 'test1234');
     await tester.tap(find.bySemanticsLabel(RegExp('login')));
+    await tester.pumpAndSettle(const Duration(milliseconds: 2000));
+    expect(find.byKey(const ValueKey('login_fuht')), findsOneWidget);
   });
 
   testWidgets('US2-User Login-Test3', (WidgetTester tester) async {
@@ -94,6 +98,8 @@ void main() async {
     await tester.enterText(
         find.byKey(const ValueKey('login_fuht')), '1234test');
     await tester.tap(find.bySemanticsLabel(RegExp('login')));
+    await tester.pumpAndSettle(const Duration(milliseconds: 2000));
+    expect(find.byKey(const ValueKey('login_fuht')), findsOneWidget);
   });
 }
 
