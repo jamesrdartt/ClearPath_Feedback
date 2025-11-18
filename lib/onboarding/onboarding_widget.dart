@@ -173,6 +173,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                       Container(
                         width: double.infinity,
                         child: TextFormField(
+                          key: ValueKey('Onboarding-Name_jtg3'),
                           controller: _model.onboardingNameTextController,
                           focusNode: _model.onboardingNameFocusNode,
                           autofocus: false,
@@ -253,6 +254,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                       Container(
                         width: double.infinity,
                         child: TextFormField(
+                          key: ValueKey('Onboarding-Email_98ca'),
                           controller: _model.onboardingEmailTextController,
                           focusNode: _model.onboardingEmailFocusNode,
                           autofocus: false,
@@ -333,6 +335,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                       Container(
                         width: double.infinity,
                         child: TextFormField(
+                          key: ValueKey('Onboarding-Password_8g4i'),
                           controller: _model.onboardingPasswordTextController,
                           focusNode: _model.onboardingPasswordFocusNode,
                           autofocus: false,
@@ -429,6 +432,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                   ),
                 ),
                 FFButtonWidget(
+                  key: ValueKey('Button_ue3p'),
                   onPressed: () async {
                     await currentUserReference!.update(createUsersRecordData(
                       email: '',

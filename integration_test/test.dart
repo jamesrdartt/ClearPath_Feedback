@@ -107,6 +107,33 @@ void main() async {
     await tester.pumpAndSettle(const Duration(milliseconds: 2000));
     expect(find.byKey(const ValueKey('login_fuht')), findsOneWidget);
   });
+
+  testWidgets('US3 - Onboarding', (WidgetTester tester) async {
+    _overrideOnError();
+
+    await tester.pumpWidget(MyApp(
+      entryPage: OnboardingWidget(),
+    ));
+    await GoogleFonts.pendingFonts();
+
+    await tester.enterText(find.byKey(const ValueKey('Signup-Email_3jcf')),
+        'testingonboarding@uri.edu');
+    await tester.enterText(
+        find.byKey(const ValueKey('Signup-Password_wt4p')), 'qazwsx123');
+    await tester.enterText(
+        find.byKey(const ValueKey('Signup-ConfirmPassword_7kco')), 'qazwsx123');
+    await tester.tap(find.byKey(const ValueKey('Signup-Button_js59')));
+    await tester.pumpAndSettle(const Duration(milliseconds: 3000));
+    // Checks Name field
+    await tester.enterText(
+        find.byKey(const ValueKey('Onboarding-Name_jtg3')), 'Test');
+    // Checks Email field
+    await tester.enterText(
+        find.byKey(const ValueKey('Onboarding-Email_98ca')), 'test@gmail.com');
+    await tester.enterText(
+        find.byKey(const ValueKey('Onboarding-Password_8g4i')), 'qazwsx123');
+    await tester.tap(find.byKey(const ValueKey('Button_ue3p')));
+  });
 }
 
 // There are certain types of errors that can happen during tests but
