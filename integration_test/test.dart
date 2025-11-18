@@ -37,14 +37,18 @@ void main() async {
     await tester.pumpAndSettle(const Duration(milliseconds: 3000));
     await tester.enterText(find.byKey(const ValueKey('Signup-Email_3jcf')),
         'testing@firebase.edu');
+    FocusManager.instance.primaryFocus?.unfocus();
     await tester.pumpAndSettle(const Duration(milliseconds: 3000));
     await tester.enterText(
         find.byKey(const ValueKey('Signup-Password_wt4p')), 'password');
+    FocusManager.instance.primaryFocus?.unfocus();
     await tester.pumpAndSettle(const Duration(milliseconds: 3000));
     await tester.enterText(
         find.byKey(const ValueKey('Signup-ConfirmPassword_7kco')), 'password');
+    FocusManager.instance.primaryFocus?.unfocus();
     await tester.pumpAndSettle(const Duration(milliseconds: 3000));
     await tester.tap(find.byKey(const ValueKey('Signup-Button_js59')));
+    await tester.pumpAndSettle(const Duration(milliseconds: 3000));
     expect(find.byKey(const ValueKey('Container_cmzu')), findsWidgets);
   });
 
