@@ -150,6 +150,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                 key: _model.formKey,
                                 autovalidateMode: AutovalidateMode.disabled,
                                 child: Column(
+                                  key: ValueKey('Column_mqv2'),
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Container(

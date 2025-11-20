@@ -47,6 +47,17 @@ void main() async {
         find.byKey(const ValueKey('Signup-ConfirmPassword_7kco')), 'password');
     FocusManager.instance.primaryFocus?.unfocus();
     await tester.pumpAndSettle(const Duration(milliseconds: 3000));
+    await tester.scrollUntilVisible(
+      find.byKey(const ValueKey('Signup-Button_js59')),
+      300.0,
+      scrollable: find
+          .descendant(
+            of: find.byKey(const ValueKey('Column_mqv2')),
+            matching: find.byType(Scrollable),
+          )
+          .first,
+    );
+    await tester.pumpAndSettle(const Duration(milliseconds: 3000));
     await tester.tap(find.byKey(const ValueKey('Signup-Button_js59')));
     await tester.pumpAndSettle(const Duration(milliseconds: 30000));
     expect(find.byKey(const ValueKey('Container_cmzu')), findsOneWidget);
