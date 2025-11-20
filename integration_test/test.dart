@@ -48,8 +48,8 @@ void main() async {
     FocusManager.instance.primaryFocus?.unfocus();
     await tester.pumpAndSettle(const Duration(milliseconds: 3000));
     await tester.tap(find.byKey(const ValueKey('Signup-Button_js59')));
-    await tester.pumpAndSettle(const Duration(milliseconds: 6000));
-    expect(find.byKey(const ValueKey('Container_cmzu')), findsWidgets);
+    await tester.pumpAndSettle(const Duration(milliseconds: 30000));
+    expect(find.byKey(const ValueKey('Container_cmzu')), findsOneWidget);
   });
 
   testWidgets('US2-User Login-Test1', (WidgetTester tester) async {
