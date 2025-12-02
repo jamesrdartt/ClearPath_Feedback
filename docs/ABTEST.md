@@ -12,12 +12,15 @@
 - Experiment: Using the Firebase Remote Config and A/B Testing we will push out the two versions of the app. Using a profile picture change metric, Firebase A/B testing will collect amount of users who change their profile picture upon account creation for Version B.
 - Variations: Version A: Users will be required to set a profile picture upon account creation. Version B: Users will not be required to change their profile picture, setting their account with the default image.
 
-# A/B Test 3 (Kevin Walker): 
-- User Story: 
-- Metric(s): 
-- Hypothesis: 
-- Experiment: 
+# A/B Test 3 (Kevin Walker): Improved Home Screen Task Visibility
+- User Story: US 4
+- Metric(s): Adoption (first task completed), Task Success (time-to-first-task), Engagement (tasks completed in first 48 hours), Happiness (1–5 satisfaction prompt after first task).
+- Hypothesis: If the task completion button is larger and more visible (Version A), users will complete their first task faster and engage more overall.
+
+- Experiment: Use Firebase Remote Config + A/B Testing to show either the large CTA button or the standard small checkbox. Firebase tracks completion events and compares both groups.
 - Variations:
+Version A: Large “Complete Task” button on each task.
+Version B: Standard small checkbox only.
 
 # A/B Test 4 (Badhan Hasan): 
 - User Story: US 3
