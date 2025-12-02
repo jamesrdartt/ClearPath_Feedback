@@ -2,11 +2,14 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/components/add_feedback_widget.dart';
 import '/components/feedback_widget.dart';
+import '/flutter_flow/flutter_flow_ad_banner.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterflow_colorpicker/flutterflow_colorpicker.dart';
 import 'feedbacks_model.dart';
 export 'feedbacks_model.dart';
 
@@ -87,24 +90,85 @@ class _FeedbacksWidgetState extends State<FeedbacksWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 24.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
-                        child: Text(
-                          'Feedback',
-                          style: FlutterFlowTheme.of(context)
-                              .headlineLarge
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .headlineLargeFamily,
-                                letterSpacing: 0.0,
-                                fontWeight: FontWeight.w600,
-                                useGoogleFonts: !FlutterFlowTheme.of(context)
-                                    .headlineLargeIsCustom,
-                              ),
+                      Flexible(
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              24.0, 0.0, 0.0, 0.0),
+                          child: Text(
+                            'Feedback',
+                            style: FlutterFlowTheme.of(context)
+                                .headlineLarge
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .headlineLargeFamily,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.w600,
+                                  useGoogleFonts: !FlutterFlowTheme.of(context)
+                                      .headlineLargeIsCustom,
+                                ),
+                          ),
                         ),
                       ),
+                      if (FFDevEnvironmentValues().debugMode ? true : false)
+                        Expanded(
+                          child: Align(
+                            alignment: AlignmentDirectional(1.0, 0.0),
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 24.0, 0.0),
+                              child: FlutterFlowIconButton(
+                                borderRadius: 8.0,
+                                buttonSize: 40.0,
+                                fillColor: colorFromCssString(
+                                  getRemoteConfigString('button_variant'),
+                                  defaultColor:
+                                      FlutterFlowTheme.of(context).secondary,
+                                ),
+                                icon: Icon(
+                                  Icons.settings_sharp,
+                                  color: FlutterFlowTheme.of(context).info,
+                                  size: 24.0,
+                                ),
+                                onPressed: () async {
+                                  final _colorPickedColor =
+                                      await showFFColorPicker(
+                                    context,
+                                    currentColor: _model.colorPicked ??
+                                        colorFromCssString(
+                                          getRemoteConfigString(
+                                              'button_variant'),
+                                          defaultColor: Colors.black,
+                                        ),
+                                    showRecentColors: true,
+                                    allowOpacity: true,
+                                    textColor: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    secondaryTextColor:
+                                        FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                    backgroundColor:
+                                        FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                    primaryButtonBackgroundColor:
+                                        FlutterFlowTheme.of(context).primary,
+                                    primaryButtonTextColor: Colors.white,
+                                    primaryButtonBorderColor:
+                                        Colors.transparent,
+                                    displayAsBottomSheet:
+                                        isMobileWidth(context),
+                                  );
+
+                                  if (_colorPickedColor != null) {
+                                    safeSetState(() =>
+                                        _model.colorPicked = _colorPickedColor);
+                                  }
+                                },
+                              ),
+                            ),
+                          ),
+                        ),
                     ],
                   ),
                 ),
@@ -274,6 +338,12 @@ class _FeedbacksWidgetState extends State<FeedbacksWidget> {
                       borderRadius: BorderRadius.circular(0.0),
                     ),
                   ),
+                ),
+                FlutterFlowAdBanner(
+                  width: MediaQuery.sizeOf(context).width * 1.0,
+                  height: 50.0,
+                  showsTestAd: true,
+                  androidAdUnitID: 'ca-app-pub-6862785500421136/5546214996',
                 ),
               ].divide(SizedBox(height: 12.0)),
             ),

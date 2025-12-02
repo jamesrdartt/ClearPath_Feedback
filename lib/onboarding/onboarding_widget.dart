@@ -90,6 +90,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                       await selectMediaWithSourceBottomSheet(
                                     context: context,
                                     maxWidth: 68.00,
+                                    imageQuality: 100,
                                     allowPhoto: true,
                                   );
                                   if (selectedMedia != null &&

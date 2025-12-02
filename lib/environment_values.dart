@@ -20,8 +20,12 @@ class FFDevEnvironmentValues {
       final String response =
           await rootBundle.loadString(environmentValuesPath);
       final data = await json.decode(response);
+      _debugMode = data['debugMode'];
     } catch (e) {
       print('Error loading environment values: $e');
     }
   }
+
+  bool _debugMode = false;
+  bool get debugMode => _debugMode;
 }

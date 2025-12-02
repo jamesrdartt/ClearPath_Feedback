@@ -11,6 +11,7 @@ import 'package:clear_path_feedback/index.dart';
 import 'package:clear_path_feedback/main.dart';
 import 'package:clear_path_feedback/flutter_flow/flutter_flow_util.dart';
 
+import 'package:provider/provider.dart';
 import 'package:clear_path_feedback/backend/firebase/firebase_config.dart';
 import 'package:clear_path_feedback/auth/firebase_auth/auth_util.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -26,12 +27,18 @@ void main() async {
 
   setUp(() async {
     await authManager.signOut();
+    FFAppState.reset();
+    final appState = FFAppState();
+    await appState.initializePersistedState();
   });
 
   testWidgets('Create an Account', (WidgetTester tester) async {
     _overrideOnError();
 
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (context) => FFAppState(),
+      child: const MyApp(),
+    ));
     await GoogleFonts.pendingFonts();
 
     await tester.pumpAndSettle(const Duration(milliseconds: 3000));
@@ -66,8 +73,11 @@ void main() async {
   testWidgets('US2-User Login-Test1', (WidgetTester tester) async {
     _overrideOnError();
 
-    await tester.pumpWidget(MyApp(
-      entryPage: LoginWidget(),
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (context) => FFAppState(),
+      child: MyApp(
+        entryPage: LoginWidget(),
+      ),
     ));
     await GoogleFonts.pendingFonts();
 
@@ -86,8 +96,11 @@ void main() async {
   testWidgets('US2-User Login-Test2', (WidgetTester tester) async {
     _overrideOnError();
 
-    await tester.pumpWidget(MyApp(
-      entryPage: LoginWidget(),
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (context) => FFAppState(),
+      child: MyApp(
+        entryPage: LoginWidget(),
+      ),
     ));
     await GoogleFonts.pendingFonts();
 
@@ -106,8 +119,11 @@ void main() async {
   testWidgets('US2-User Login-Test3', (WidgetTester tester) async {
     _overrideOnError();
 
-    await tester.pumpWidget(MyApp(
-      entryPage: LoginWidget(),
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (context) => FFAppState(),
+      child: MyApp(
+        entryPage: LoginWidget(),
+      ),
     ));
     await GoogleFonts.pendingFonts();
 
@@ -126,8 +142,11 @@ void main() async {
   testWidgets('US3 - Onboarding', (WidgetTester tester) async {
     _overrideOnError();
 
-    await tester.pumpWidget(MyApp(
-      entryPage: OnboardingWidget(),
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (context) => FFAppState(),
+      child: MyApp(
+        entryPage: OnboardingWidget(),
+      ),
     ));
     await GoogleFonts.pendingFonts();
 
